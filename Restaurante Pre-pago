@@ -1,0 +1,34 @@
+algoritmo "Restaurante Pre-pago"
+
+var
+  valorPrato: inteiro
+  Qprato: inteiro
+  saldo: inteiro
+  gasto: inteiro
+  pedido: logico
+  OguriCap: logico
+
+inicio
+  valorPrato <- 30
+  pedido <- saldo <= 0
+
+  escreval ("Pode consumir?")
+  leia(OguriCap)
+
+  enquanto(OguriCap) faca
+    se (pedido) entao
+      escreval("Qual é seu saldo?")
+      leia (saldo)
+      escreval ("Quantos pratos foram consumidos?")
+      leia(Qprato)
+      gasto <- gasto + (valorPrato * Qprato)
+      saldo <- saldo - gasto
+      escreval ("Check final: " + saldo)
+       leia (saldo)
+    senao
+      escreval ("Saldo insuficiente!")
+    fimse
+  fimenquanto
+
+
+fimalgoritmo
